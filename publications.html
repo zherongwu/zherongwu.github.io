@@ -1251,9 +1251,10 @@ filter: invert(100%);
                                                                                 Journal Publications
                                                                             </span>
                                                                         </p>
-                                                                        <ul class="n8H08c UVNKR " style="list-style-type: square; margin-left: 0; margin-right: 0; padding: 0;">
-																		    <img src="https://www.cse.cuhk.edu.hk/~qdou/posters/SurRoL_Embodied_AI_2023.png" class="d-block w-100">
+                                                                        <ul class="n8H08c UVNKR publication" style="list-style-type: square; margin-left: 0; margin-right: 0; padding: 0;">
+																		    
 																			<li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 15.0pt;">
+																			    <img src="https://www.cse.cuhk.edu.hk/~qdou/posters/SurRoL_Embodied_AI_2023.png" class="d-block">
                                                                                 <p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
                                                                                     <span class="C9DxTc " style="font-family: Lato, Arial; font-weight: 700;">
                                                                                         Wu, Z.
@@ -1280,6 +1281,7 @@ filter: invert(100%);
                                                                                 </p>
                                                                             </li>
                                                                             <li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 15.0pt;">
+																			    <img src="https://www.cse.cuhk.edu.hk/~qdou/posters/SurRoL_Embodied_AI_2023.png" class="d-block">
                                                                                 <p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
                                                                                     <span class="C9DxTc " style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
                                                                                         Wu, Z.
@@ -1307,6 +1309,7 @@ filter: invert(100%);
                                                                                 </p>
                                                                             </li>
                                                                             <li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 15.0pt;">
+																			    <img src="https://www.cse.cuhk.edu.hk/~qdou/posters/SurRoL_Embodied_AI_2023.png" class="d-block">
                                                                                 <p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
                                                                                     <span class="C9DxTc " style="font-variant: normal;">
                                                                                         Ma, P., Zheng, Y.,Zhang, Z.,
@@ -1336,6 +1339,7 @@ filter: invert(100%);
                                                                                 </p>
                                                                             </li>
                                                                             <li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 15.0pt;">
+																			    <img src="https://www.cse.cuhk.edu.hk/~qdou/posters/SurRoL_Embodied_AI_2023.png" class="d-block">
                                                                                 <p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
                                                                                     <span class="C9DxTc " style="font-variant: normal;">
                                                                                         Liu,Y., Kwan, M.-P., &amp;
@@ -1365,6 +1369,7 @@ filter: invert(100%);
                                                                                 </p>
                                                                             </li>
                                                                             <li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 15.0pt;">
+																			    <img src="https://www.cse.cuhk.edu.hk/~qdou/posters/SurRoL_Embodied_AI_2023.png" class="d-block">
                                                                                 <p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
                                                                                     <span class="C9DxTc " style="font-variant: normal;">
                                                                                         Zhao,Z.,
@@ -1394,6 +1399,7 @@ filter: invert(100%);
                                                                                 </p>
                                                                             </li>
                                                                         </ul>
+																		<div style="width:100%;clear:both;"></div>
                                                                         <p dir="ltr" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
                                                                             <span class="C9DxTc " style="font-family: Lato, Arial; font-weight: 700;">
                                                                                 Peer-reviewed
@@ -1698,7 +1704,27 @@ filter: invert(100%);
 				}
             }); 
         });              
-        </script>			
+        </script>
+
+<div id="ShowImage_Form" class="modal hide">         
+         <div class="modal-header">
+             <button data-dismiss="modal" class="close" type="button">X</button>
+         </div>
+           <div class="modal-body">
+            <div id="img_show">
+            </div>
+        </div>
+</div>
+        <style>.modal-open .modal{margin-top: 28px;}button.close{border:2;}.publication li{width:100%;height:100%;min-height:120px;float:left;list-style:none;}.publication li img{width:18%;margin:0 18px 0 0;float:left;}.publication li p{width:78%;float:left;}</style>
+        <script nonce="5qXN1AD5x9-XYu-3ldSAZQ">
+         $(document).ready(function() { 
+         $(".publication li img").click(function() {
+              $("#ShowImage_Form").find("#img_show").html("<image src='"+$(this).attr("src")+"' class='carousel-inner img-responsive img-rounded' />");
+              $("#ShowImage_Form").modal();				
+            });
+			
+        });  	
+        </script>		
     </body>
 
 </html>
